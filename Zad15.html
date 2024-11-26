@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rozkład ułamka egipskiego - Zadanie 15</title>
+    <script type="text/javascript">
+        function rozkladUlamka() {
+            var m = parseInt(prompt("Podaj wartość m (m > 0):", ""));
+            if (m > 0) {
+                var a = m * 2;
+                document.write("Rozkład ułamka 1/" + m + " na dwa takie same ułamki egipskie:<br>");
+                document.write("1/" + m + " = 1/" + a + " + 1/" + a + "<br>");
+            } else {
+                document.write("Wartość m musi być większa od 0.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Zaliczenie - BUR - Zadanie 15</h1>
+    <input type="button" onclick="rozkladUlamka()" value="Rozłóż ułamek" />
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaliczenie - Burakowski -Zadanie8</title>
+    <script type="text/javascript">
+        function show_confirm() {
+            var r = confirm("Naciśnij klawisz");
+            if (r == true) {
+                document.write("Nacisnąłeś OK!");
+            } else {
+                document.write("Nacisnąłeś Cancel!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Zaliczenie - Burakowski -Zadanie8</h1>
+    <input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+
+    <h2>Teoria - Confirm Box</h2>
+    <p>
+        <strong>Confirm Box:</strong> Jest to okno dialogowe, które umożliwia zapytanie użytkownika 
+        o weryfikację lub akceptację jakichś danych. Wyświetla ono komunikat z przyciskami "OK" i 
+        "Cancel", dzięki czemu użytkownik może podjąć decyzję.
+    </p>
+    <p>
+        Użytkownik musi nacisnąć „OK”, aby zaakceptować proponowaną akcję lub „Cancel”, aby ją 
+        odrzucić. Jeżeli wybierze „OK”, metoda zwraca <strong>true</strong>, w przeciwnym razie 
+        zwraca <strong>false</strong>. Confirm Box jest często używany w sytuacjach, gdy konieczne 
+        jest uzyskanie zgody użytkownika, np. przed usunięciem danych czy opuszczeniem strony.
+    </p>
+</body>
+</html>

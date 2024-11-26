@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod programu - Zadanie 18</title>
+    <script type="text/javascript">
+        function okno_zamknij() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>Kod programu - Zadanie 18</h1>
+    <textarea name="program_code" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Definiowanie oraz użycie funkcji - Zadanie 18</title>
+</head>
+<body>
+    <div style="color:navy;font-size:50px;">
+        <script language="JavaScript">
+            var a = parseFloat(prompt("a=", ""));
+            var b = parseFloat(prompt("b=", ""));
+
+            function suma_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) {
+                return a + b;
+            }
+
+            function odejmowanie_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) {
+                return a - b;
+            }
+
+            function mnozenie_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) {
+                return a * b;
+            }
+
+            function od_kwadratu_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) {
+                return a * a + b * b;
+            }
+
+            function reszta_z_dzielenia_a_przez_b_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) {
+                return a % b;
+            }
+
+            document.write("Suma = " + suma_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) + "<br>");
+            document.write("Różnica = " + odejmowanie_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) + "<br>");
+            document.write("Iloczyn = " + mnozenie_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) + "<br>");
+            document.write("Suma kwadratów = " + od_kwadratu_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) + "<br>");
+            document.write("Reszta z dzielenia = " + reszta_z_dzielenia_a_przez_b_trzy_pierwsze_liter_nazwisko_małe_litery_bez_polskich_liter(a, b) + "<br>");
+        </script>
+    </div>
+</body>
+</html>
+    </textarea>
+    <br>
+    <input type="button" value="Zamknij okno" onclick="okno_zamknij()" />
+</body>
+</html>

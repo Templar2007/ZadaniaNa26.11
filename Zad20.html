@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczanie Długości Boków Trójkąta</title>
+    <script>
+        function AB_kry(xa_bur, ya_bur, xb_bur, yb_bur) {
+            return Math.sqrt(Math.pow(xb_bur - xa_bur, 2) + Math.pow(yb_bur - ya_bur, 2));
+        }
+
+        function BC_kry(xb_bur, yb_bur, xc_bur, yc_bur) {
+            return Math.sqrt(Math.pow(xc_bur - xb_bur, 2) + Math.pow(yc_bur - yb_bur, 2));
+        }
+
+        function AC_kry(xa_bur, ya_bur, xc_bur, yc_bur) {
+            return Math.sqrt(Math.pow(xc_bur - xa_bur, 2) + Math.pow(yc_bur - ya_bur, 2));
+        }
+
+        function oblicz() {
+            var xa_bur = parseFloat(document.getElementById('xa').value);
+            var ya_bur = parseFloat(document.getElementById('ya').value);
+            var xb_bur = parseFloat(document.getElementById('xb').value);
+            var yb_bur = parseFloat(document.getElementById('yb').value);
+            var xc_bur = parseFloat(document.getElementById('xc').value);
+            var yc_bur = parseFloat(document.getElementById('yc').value);
+
+            var AB = AB_kry(xa_bur, ya_bur, xb_bur, yb_bur);
+            var BC = BC_kry(xb_bur, yb_bur, xc_bur, yc_bur);
+            var AC = AC_kry(xa_bur, ya_bur, xc_bur, yc_bur);
+
+            document.getElementById('wyniki').innerHTML = `
+                Długości boków:<br>
+                AB: ${AB.toFixed(2)}<br>
+                BC: ${BC.toFixed(2)}<br>
+                AC: ${AC.toFixed(2)}
+            `;
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    <form onsubmit="event.preventDefault(); oblicz();">
+        <label for="xa">A(xa, ya):</label>
+        <input type="number" id="xa" required> 
+        <input type="number" id="ya" required><br>
+
+        <label for="xb">B(xb, yb):</label>
+        <input type="number" id="xb" required> 
+        <input type="number" id="yb" required><br>
+
+        <label for="xc">C(xc, yc):</label>
+        <input type="number" id="xc" required> 
+        <input type="number" id="yc" required><br>
+
+        <button type="submit">Oblicz</button>
+    </form>
+
+    <div id="wyniki"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod programu - Zadanie 19</title>
+    <script type="text/javascript">
+        function okno_zamknij() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>Kod programu - Zadanie 19</h1>
+    <textarea name="program_code" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie pola i obwodu - Zadanie 19</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function pole_BUR() {
+            var a_kow = parseFloat(document.getElementById('dlugosc').value);
+            var b_kow = a_kow * a_kow;
+            document.getElementById("nazwa").innerHTML = "Pole kwadratu = " + b_kow.toFixed(2) + " cm²";
+        }
+
+        function obwod_BUR() {
+            var a_kow = parseFloat(document.getElementById('dlugosc').value);
+            var b_kow = 4 * a_kow;
+            document.getElementById("nazwa").innerHTML = "Obwód kwadratu = " + b_kow.toFixed(2) + " cm";
+        }
+    </script>
+
+    <h1>Wszystko o KWADRACIE</h1><br><br>
+    Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+    <input type="button" name="pole" value="Oblicz pole" onclick="pole_kow()"><br><br>
+    <input type="button" name="obwod" value="Oblicz obwód" onclick="obwod_kow()"><br><br>
+    <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+</html>
+    </textarea>
+    <br>
+    <input type="button" value="Zamknij okno" onclick="okno_zamknij()" />
+</body>
+</html>

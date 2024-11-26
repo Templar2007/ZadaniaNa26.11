@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wykonał: Kacper Burakowski</title>
+    <style>
+        h1 {
+            color: red;
+            font-size: 36px;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .buttons input {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+    <script type="text/javascript">
+        function openWindow(file, windowName, top, left) {
+            window.open(file, windowName, "toolbar=no,directories=no,menubar=no,height=400,width=400,top=" + top + ",left=" + left);
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Wykonał: Kacper Burakowski, mój numer w dzienniku to 3, czyli mam układ [(3) mod 4=3] układ 2</h1>
+
+    <div class="buttons">
+        <input type="button" value="Grafika1" onclick="openWindow('grafika1.html', 'okienko1', 325, 0)">
+        <input type="button" value="Grafika2" onclick="openWindow('grafika2.html', 'okienko2', 250, 250)">
+        <input type="button" value="Grafika3" onclick="openWindow('grafika3.html', 'okienko3', 175, 500)">
+        <input type="button" value="Grafika4" onclick="openWindow('grafika4.html', 'okienko4', 100, 750)">
+    </div>
+
+</body>
+</html>

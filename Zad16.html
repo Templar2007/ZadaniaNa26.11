@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczenia - Zadanie 16</title>
+    <script type="text/javascript">
+        function obliczenia() {
+            var A = parseInt(prompt("Podaj pierwszą liczbę A=", ""));
+            var B = parseInt(prompt("Podaj drugą liczbę B=", ""));
+            if (!isNaN(A) && !isNaN(B)) {
+                var wynik = Math.pow(A + B, 3);
+                var rozw = Math.pow(A, 3) + 3 * (Math.pow(A, 2) * B) + 3 * (A * Math.pow(B, 2)) + Math.pow(B, 3);
+                document.write("<span style='color: navy; font-size: 24px;'>");
+                document.write("Wczytane liczby: A=" + A + " B=" + B + "<br>");
+                document.write("(" + A + " + " + B + ")^3 = " + rozw + " = " + wynik);
+                document.write("</span><br>");
+            } else {
+                document.write("Podaj poprawne liczby.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Zaliczenie - BUR - Zadanie 16</h1>
+    <input type="button" onclick="obliczenia()" value="Oblicz" />
+</body>
+</html>
